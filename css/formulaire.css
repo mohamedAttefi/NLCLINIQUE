@@ -1,30 +1,87 @@
-body{
+body {
     background-image: url(/images/télécharger.jpg);
 
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.main-content-area{
-    
-    border: 3px rgb(0, 0, 0) solid;
-    width: 100%;
+
+.main-content {
+    text-align: center;
+    height: 250vh;
     display: flex;
-    justify-items: center;
+    justify-content: center;
+    padding: 5vh;
+}
+
+.mycontainer h3 {
+    font-size: 3em;
+    font-weight: bolder;
+    color: black;
+}
+
+.mycontainer {
+    border: 3px black solid;
+    height: 100%;
+    width: 80%;
     padding: 10vh;
+    background-color: rgba(255, 255, 255, 0.696);
+    box-shadow: 4px 4px 15px black;
+    border-radius: 5vh;
 }
-.title{
-    height: 200vh;
-    width: 100%;
-    border: 3px rgb(0, 0, 0) solid;
-    background-color: white;
-    padding: 0 20vh;
+
+.info div {
+    padding: 5vh;
+    font-size: 1.5em;
 }
-.main-content{
-    border: 3px rgb(0, 0, 0) solid;
+
+.info {
     display: flex;
-    justify-items: center;
+    flex-direction: column;
+    align-items: start;
 }
-.right-panel{
-    margin-right: -100vh;
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.grid div {
+    padding: 5vh;
+    font-size: 1.5em;
+}
+
+.actions {
+    font-size: 1.5em;
+    padding: 5vh;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    align-items: center;
+}
+
+.actions button {
+    width: 50%;
+    padding: 1vh;
+    border: none;
+    background: #3f97da;
+    color: black;
+    border-radius: 5px 5px 5px;
+}
+
+.actions button:hover {
+    transform: translateY(-4px);
+    box-shadow: 3px 3px 5px rgb(0, 59, 169);
+}
+
+.actions button:active {
+    transform: translateY(0);
+}
+.mycontainer input, select{
+    border: none;
+    box-shadow: 3px 3px 5px black;
+}
+.mycontainer input, select:active{
+    border: none;
 }

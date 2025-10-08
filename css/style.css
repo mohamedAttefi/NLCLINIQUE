@@ -104,7 +104,13 @@ ul {
 
 a:hover {
   text-decoration: none; }
-
+  .uni-shortcode-icon-box-1-default{
+    box-shadow: 2px 2px 5px black;
+      
+    
+    
+  }
+  
 .uni-clear-padding {
   padding: 0; }
 
@@ -155,7 +161,11 @@ a:hover {
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center; 
+  }
+  .wrapper-logo img{
+    box-shadow: 2px 2px 5px black;
+  }
   @media screen and (max-width: 767px) {
     .wrapper-logo {
       -webkit-box-pack: inherit;
@@ -1337,13 +1347,13 @@ a:hover {
       line-height: 1.29;
       letter-spacing: normal;
       text-align: left;
-      color: #333333;
+      color: white;
       text-transform: uppercase;
       -webkit-transition: all 0.5s;
       -o-transition: all 0.5s;
-      transition: all 0.5s; }
+      transition: all 1s; }
       .uni-home-latest-post .item .item-caption h4 a:hover {
-        color: #3f97da; }
+        color: #7cc6ff; }
     .uni-home-latest-post .item .item-caption .time {
       font-family: 'Poppins';
       font-size: 14px;
@@ -2447,7 +2457,7 @@ a:hover {
       line-height: 1.71;
       letter-spacing: normal;
       text-align: left;
-      color: #666666; }
+      color: white; }
     .uni-our-services-2 .uni-our-service-2-content-default .item-caption ul {
       padding-top: 20px; }
       .uni-our-services-2 .uni-our-service-2-content-default .item-caption ul li {
@@ -2666,7 +2676,7 @@ a:hover {
       line-height: 1.71;
       letter-spacing: normal;
       text-align: center;
-      color: #666666; }
+      color: white; }
 
 /*SINGLE DEPARTMENT*/
 .uni-single-departments-body {
@@ -5607,7 +5617,7 @@ a:hover {
 
 /*ICONS BOXS 1*/
 .uni-shortcode-icon-box-1-default {
-  border: solid 1px #e0e0e0;
+  
   margin-bottom: 100px;
   position: relative; }
   .uni-shortcode-icon-box-1-default .item-icons {
@@ -5656,7 +5666,7 @@ a:hover {
       line-height: 1.71;
       letter-spacing: normal;
       text-align: center;
-      color: #666666; }
+      color: white; }
 
 /*icons box 2*/
 .uni-background-blue {
@@ -6420,8 +6430,9 @@ a:hover {
     display: none; }
 
 .uni-shortcode-testimonials-default {
-  border: 1px solid #E0E0E0;
-  padding: 20px 30px; }
+  border: 1px solid black;
+  padding: 20px 30px; 
+  box-shadow: 3px 3px 5px black;}
   .uni-shortcode-testimonials-default .item-info .item-info-title {
     margin-bottom: 10px; }
     .uni-shortcode-testimonials-default .item-info .item-info-title h4 {
@@ -6453,7 +6464,8 @@ a:hover {
       line-height: 1.71;
       letter-spacing: normal;
       text-align: left;
-      color: #666666; }
+      color: white; 
+      padding: 2vh;}
 
 .uni-shortcode-testimonials-2 {
   padding: 100px 0;
@@ -6695,7 +6707,46 @@ a:hover {
     -ms-flex-pack: center;
     justify-content: center;
     height: 70px;
-    background-color: #3f97da; }
+    background-color: #3f97da;
+     }
+     a:hover {
+            transform: translateY(-4px);
+            text-shadow: 1px 1px 2px rgb(0, 59, 169);
+        }
+
+        a:active {
+            transform: translateY(0px);
+        }
+
+        .uni-home-title {
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        .title {
+            display: flex;
+            margin-left: 42%;
+            align-items: center;
+            text-align: center;
+            display: block;
+            font-size: 4em;
+            font-weight: bolder;
+        }
+        .accordion-default{
+            background-color: #3f97da;
+            padding: 10vh;
+        }
+        .accordion .accordion-item{
+            background-color: white;
+        }
+        .item-caption{
+            background-color: #3f97da;
+            box-shadow: 2px 2px 5px black;
+        }
+        .item-icons{
+            box-shadow: 4px 4px 5px black;
+        }
+        .uni-team-default{box-shadow: 4px 4px 10px black;}
   .uni-team-default .item-caption .item-title {
     padding-left: 15px; }
     .uni-team-default .item-caption .item-title h4 {
