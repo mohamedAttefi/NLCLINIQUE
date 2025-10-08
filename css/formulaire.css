@@ -1,0 +1,30 @@
+body{
+    background-image: url(/images/télécharger.jpg);
+
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main-content-area{
+    
+    border: 3px rgb(0, 0, 0) solid;
+    width: 100%;
+    display: flex;
+    justify-items: center;
+    padding: 10vh;
+}
+.title{
+    height: 200vh;
+    width: 100%;
+    border: 3px rgb(0, 0, 0) solid;
+    background-color: white;
+    padding: 0 20vh;
+}
+.main-content{
+    border: 3px rgb(0, 0, 0) solid;
+    display: flex;
+    justify-items: center;
+}
+.right-panel{
+    margin-right: -100vh;
+}
