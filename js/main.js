@@ -447,7 +447,7 @@ function submit() {
         
         setTimeout(() => {
             document.querySelector("body").remove();
-           window.location.href = "home.html";
+           window.location.href = "index.html";
             
         }, 1000);
     }
