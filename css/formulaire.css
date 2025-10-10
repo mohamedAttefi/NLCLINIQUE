@@ -27,13 +27,16 @@ body :nth-of-type[header]{
     font-weight: bolder;
     color: black;
 }
+.mycontainer label{
+    
+}
 
 .mycontainer {
     border: 3px black solid;
     height: 100%;
     width: 80%;
     padding: 10vh;
-    background-color: rgba(255, 255, 255, 0.801);
+    background: linear-gradient(90deg, rgb(211, 211, 211) 30%, rgba(207, 207, 207, 0.603)100%);
     box-shadow: 4px 4px 15px black;
     border-radius: 5vh;
     animation: bgColor 4s ;
@@ -91,7 +94,7 @@ body :nth-of-type[header]{
 .mycontainer input, select{
     border: none;
     box-shadow: 1px 1px 2px black;
-    background-color: rgba(128, 128, 128, 0.477);
+    background-color: rgba(128, 128, 128, 0.731);
 }
 .mycontainer input, select:active{
     border: none;

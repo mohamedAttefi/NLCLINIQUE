@@ -449,7 +449,7 @@ function submit() {
             document.querySelector("body").remove();
            window.location.href = "home.html";
             
-        }, 2000);
+        }, 1000);
     }
 }
 
@@ -474,6 +474,3 @@ function clear() {
 
 
 
-let activePage = document.getElementById("active")
-
-activePage.style.color = "blue"

@@ -6716,6 +6716,7 @@ a:hover {
 
         a:active {
             transform: translateY(0px);
+            text-shadow: none;
         }
 
         .uni-home-title {
@@ -7149,3 +7150,12 @@ a:hover {
   .uni-shortcode-pricing-table-2 .panel-profresinal .panel-footer a {
     background-color: #3f97da;
     color: #fff; }
+
+#active:hover{
+  transform: translateY(0);
+  text-shadow: none;
+  cursor: default;
+}
+#active{
+  color: rgba(77, 128, 224, 1);
+}
