@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Formulaire</title>
+    <title>Appointment</title>
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
     <link rel="stylesheet" href="plugin/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="plugin/bootstrap/css/bootstrap-theme.css">
@@ -79,9 +79,6 @@
                                             <li class="un-btn-search">
                                                 <i class="fa fa-search" aria-hidden="true"></i>
                                             </li>
-                                            <li class="uni-btn-appointment">
-                                                <a href="formulaire.html">Appointment</a>
-                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -105,9 +102,18 @@
                     </div>
                 </div>
             </header>
+            <div class="load-page" id="load">
+                <div class="sk-wave">
+                    <div class="sk-rect sk-rect1"></div>
+                    <div class="sk-rect sk-rect2"></div>
+                    <div class="sk-rect sk-rect3"></div>
+                    <div class="sk-rect sk-rect4"></div>
+                    <div class="sk-rect sk-rect5"></div>
+                </div>
+            </div>
             <div class="main-content">
                 <div class="mycontainer">
-                    <h3>Formulaire</h3>
+                    <h3>Appointment</h3>
                     <p class="subtitle">Please complete the details below. Fields marked with * are required.</p>
                     <div class="info">
                         <div class="">
@@ -145,7 +151,7 @@
 
                         <div>
                             <label for="email">Email*</label>
-                            <input id="email" name="email" type="email" placeholder="example@gmail.com" required >
+                            <input id="email" name="email" type="email" placeholder="example@gmail.com" required>
                         </div>
 
 
@@ -167,38 +173,38 @@
                         </div>
                     </div>
 
-                        
 
 
-                        <section class="section">
-                            <div class="grid">
-                                <div class="full">
-                                    <label><input id="authorize" type="checkbox" required> I authorize the hospital to
-                                        provide medical treatment and to share information with the insurance provider
-                                        as necessary*</label>
-                                </div>
 
-
-                                <div>
-                                    <label for="signature">Signature (type full name)
-                                            </label>
-                                    <input id="signature" name="signature" type="text" required>
-                                </div>
-
-
-                                <div>
-                                    <label for="Date">Date*</label>
-                                    <input id="Date" name="Date" type="date" required>
-                                </div>
+                    <section class="section">
+                        <div class="grid">
+                            <div class="full">
+                                <label><input id="authorize" type="checkbox" required> I authorize the hospital to
+                                    provide medical treatment and to share information with the insurance provider
+                                    as necessary*</label>
                             </div>
-                        </section>
 
 
-                        <div class="actions">
-                            <button type="button" id="resetBtn">Reset</button>
-                            <button type="submit">Submit</button>
+                            <div>
+                                <label for="signature">Signature (type full name)
+                                </label>
+                                <input id="signature" name="signature" type="text" required>
+                            </div>
+
+
+                            <div>
+                                <label for="Date">Date*</label>
+                                <input id="Date" name="Date" type="date" required>
+                            </div>
                         </div>
-                        </form>
+                    </section>
+
+
+                    <div class="actions">
+                        <button type="button" id="resetBtn" onclick="reset()">Reset</button>
+                        <button type="submit" onclick="submit()">Submit</button>
+                    </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -340,7 +346,7 @@
     <script src="plugin/datetimepicker/bootstrap-datepicker.tr.min.js"></script>
     <script src="plugin/datetimepicker/bootstrap-datetimepicker.js"></script>
     <script src="plugin/datetimepicker/bootstrap-datetimepicker.fr.js"></script>
-
+    <script src="/js/formulaire.js"></script>
     <script src="plugin/lightgallery/picturefill.min.js"></script>
     <script src="plugin/lightgallery/lightgallery.js"></script>
     <script src="plugin/lightgallery/lg-pager.js"></script>

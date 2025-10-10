@@ -6709,7 +6709,7 @@ a:hover {
     height: 70px;
     background-color: #3f97da;
      }
-     a:hover {
+     a:hover{
             transform: translateY(-4px);
             text-shadow: 1px 1px 2px rgb(0, 59, 169);
         }

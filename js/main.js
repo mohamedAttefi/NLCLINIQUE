@@ -8,12 +8,12 @@ document.addEventListener('DOMContentLoaded', function () {
 $(document).ready(function () {
     "use strict";
     //==================load page===============
-    setTimeout(function() {
+    setTimeout(function () {
         jQuery('.load-page').hide();
     }, 500);
 
     //-----------------Sticky memu-----------------
-    $(".sticky-menu").sticky({topSpacing:0});
+    $(".sticky-menu").sticky({ topSpacing: 0 });
 
     //=====================light gallery============
     lightGallery(document.getElementById('lightgallery1'));
@@ -42,7 +42,7 @@ $(document).ready(function () {
 
     //--------------------FORM SEARCH HEADER--------------------
     $('.uni-search-appointment').on('click', function (e) {
-        if($(e.target).is('li.un-btn-search , li.un-btn-search i')){
+        if ($(e.target).is('li.un-btn-search , li.un-btn-search i')) {
             $('.uni-form-search-header .box-search-header').slideToggle();
         }
     });
@@ -57,11 +57,11 @@ $(document).ready(function () {
         }
     });
     $('#toTop').on('click', function (e) {
-        if($(e.target).is('.btn-totop')){
+        if ($(e.target).is('.btn-totop')) {
             $("html, body").animate({ scrollTop: 0 }, 600);
             return false;
         }
-        if($(e.target).is('.btn-totop i')){
+        if ($(e.target).is('.btn-totop i')) {
             $("html, body").animate({ scrollTop: 0 }, 600);
             return false;
         }
@@ -69,22 +69,22 @@ $(document).ready(function () {
 
     //-----------------menu mobile---------------------
     $('.mobile-menu-container .menu-mobile-nav').on('click', function (e) {
-        if($(e.target).is('.icon-bar i')){
+        if ($(e.target).is('.icon-bar i')) {
             $('#cssmenu').slideToggle();
             $('#cssmenu ul').slideToggle();
             $('#cssmenu ul ul').hide();
         }
     });
-    $('.uni-icons-close'). on('click', function (e) {
-        if($(e.target).is('i')){
-            $('#cssmenu').hide( 500);
+    $('.uni-icons-close').on('click', function (e) {
+        if ($(e.target).is('i')) {
+            $('#cssmenu').hide(500);
             $('#cssmenu ul').hide(500);
         }
     });
 
-    (function($) {
+    (function ($) {
 
-        $.fn.menumaker = function(options) {
+        $.fn.menumaker = function (options) {
 
             var cssmenu = $(this), settings = $.extend({
                 title: "Menu",
@@ -92,13 +92,13 @@ $(document).ready(function () {
                 sticky: false
             }, options);
 
-            return this.each(function() {
+            return this.each(function () {
 
                 cssmenu.find('li ul').parent().addClass('has-sub');
 
-                var multiTg = function() {
+                var multiTg = function () {
                     cssmenu.find(".has-sub").prepend('<span class="submenu-button"></span>');
-                    cssmenu.find('.submenu-button').on('click', function() {
+                    cssmenu.find('.submenu-button').on('click', function () {
                         $(this).toggleClass('submenu-opened');
                         $(this).toggleClass('active');
                         if ($(this).siblings('ul').hasClass('open')) {
@@ -115,8 +115,8 @@ $(document).ready(function () {
 
                 if (settings.sticky === true) cssmenu.css('position', 'fixed');
 
-                var resizeFix = function() {
-                    if ($( window ).width() > 768) {
+                var resizeFix = function () {
+                    if ($(window).width() > 768) {
                         cssmenu.find('ul').show();
                     }
 
@@ -131,8 +131,8 @@ $(document).ready(function () {
         };
     })(jQuery);
 
-    (function($){
-        $(document).ready(function() {
+    (function ($) {
+        $(document).ready(function () {
             $("#cssmenu").menumaker({
                 title: "",
                 format: "multitoggle"
@@ -142,7 +142,7 @@ $(document).ready(function () {
 
             var foundActive = false, activeElement, linePosition = 0, menuLine = $("#cssmenu #menu-line"), lineWidth, defaultPosition, defaultWidth;
 
-            $("#cssmenu > ul > li").each(function() {
+            $("#cssmenu > ul > li").each(function () {
                 if ($(this).hasClass('active')) {
                     activeElement = $(this);
                     foundActive = true;
@@ -161,13 +161,13 @@ $(document).ready(function () {
             menuLine.css("left", linePosition);
 
             $("#cssmenu > ul > li").on('mouseenter', function () {
-                    activeElement = $(this);
-                    lineWidth = activeElement.width();
-                    linePosition = activeElement.position().left;
-                    menuLine.css("width", lineWidth);
-                    menuLine.css("left", linePosition);
-                },
-                function() {
+                activeElement = $(this);
+                lineWidth = activeElement.width();
+                linePosition = activeElement.position().left;
+                menuLine.css("width", lineWidth);
+                menuLine.css("left", linePosition);
+            },
+                function () {
                     menuLine.css("left", defaultPosition);
                     menuLine.css("width", defaultWidth);
                 });
@@ -176,18 +176,18 @@ $(document).ready(function () {
 
     //-----------------------PROCESS BAR---------------------------
     $('.uni-processbar-thick .progress .progress-bar').css("width",
-        function() {
+        function () {
             return $(this).attr("aria-valuenow") + "%";
         }
     );
 
     //-----------------------process-bar OUR CAUSES---------------------
     $(function () {
-        $('[data-toggle="tooltip"]').tooltip({trigger: 'manual'}).tooltip('show');
+        $('[data-toggle="tooltip"]').tooltip({ trigger: 'manual' }).tooltip('show');
     });
 
-    $( window ).scroll(function() {
-        $(".progress-bar").each(function(){
+    $(window).scroll(function () {
+        $(".progress-bar").each(function () {
             var each_bar_width = $(this).attr('aria-valuenow');
             $(this).width(each_bar_width + '%');
         });
@@ -195,7 +195,7 @@ $(document).ready(function () {
 
     //-----------------------------ACORDION---------------------------
     $('.accordion-default .accordion .accordion-toggle').on('click', function (e) {
-        if($(e.target).is('.accordion-toggle, .accordion-icosn, img , h4')){
+        if ($(e.target).is('.accordion-toggle, .accordion-icosn, img , h4')) {
             $(this).next().slideToggle('600');
             $(".accordion-content").not($(this).next()).slideUp('600');
             $(this).toggleClass('active').siblings().removeClass('active');
@@ -209,35 +209,35 @@ $(document).ready(function () {
     });
 
     //----------------------FILTER PRICE-----------------------
-    $( function() {
-        $( "#slider-range" ).slider({
+    $(function () {
+        $("#slider-range").slider({
             range: true,
             min: 0,
             max: 17000,
-            values: [ 2000, 15000 ],
-            slide: function( event, ui ) {
-                $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+            values: [2000, 15000],
+            slide: function (event, ui) {
+                $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
             }
         });
-        $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-            " - $" + $( "#slider-range" ).slider( "values", 1 ) );
-    } );
+        $("#amount").val("$" + $("#slider-range").slider("values", 0) +
+            " - $" + $("#slider-range").slider("values", 1));
+    });
 
     //-----------------replace image single product----------------
-    jQuery('.flexslider .product-slide .img-small img').on('click', function(e) {
-        if($(e.target).is('img')){
+    jQuery('.flexslider .product-slide .img-small img').on('click', function (e) {
+        if ($(e.target).is('img')) {
             var value2 = jQuery(this).attr("data-filter2");
             console.log(value2);
 
             jQuery('.flexslider .product-slide .img-small img').addClass('none');
-            jQuery('.filter2').not("."+value2).removeClass('active');
-            jQuery('.filter2').filter("."+value2).addClass('active');
+            jQuery('.filter2').not("." + value2).removeClass('active');
+            jQuery('.filter2').filter("." + value2).addClass('active');
         }
 
     });
 
     $('.flexslider .product-slide .img-small').on('click', function (e) {
-        if($(e.target).is('img')){
+        if ($(e.target).is('img')) {
             $('.img-small').removeClass('active');
             $(this).addClass('active');
         }
@@ -245,17 +245,17 @@ $(document).ready(function () {
 
     //------------------------checkout-----------------------------
     $('.woocommerce-info').on('click', function (e) {
-        if($(e.target).is('.click-here-to-login')){
+        if ($(e.target).is('.click-here-to-login')) {
             $('.vk-form-woo-login').slideToggle();
             return false;
         }
-        if($(e.target).is('.click-here-entry-code')){
+        if ($(e.target).is('.click-here-entry-code')) {
             $('.vk-check-coupon').slideToggle();
             return false;
         }
     });
     $('.vk-checkout-billing-left').on('click', function (e) {
-        if($(e.target).is('.checkbox-create-account')){
+        if ($(e.target).is('.checkbox-create-account')) {
             $('.checkbox-create-account-form').slideToggle();
         }
     });
@@ -292,10 +292,10 @@ $(document).ready(function () {
     var date = new Date();
     var bugun = moment(date).format("DD/MM/YYYY");
 
-    var date_input1=$('input[name="date1"]'); //our date input has the name "date"
-    var date_input2=$('input[name="date2"]'); //our date input has the name "date"
-    var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
-    var options={
+    var date_input1 = $('input[name="date1"]'); //our date input has the name "date"
+    var date_input2 = $('input[name="date2"]'); //our date input has the name "date"
+    var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
+    var options = {
         container: container,
         todayHighlight: true,
         autoclose: true,
@@ -303,10 +303,10 @@ $(document).ready(function () {
         language: 'tr'
     };
     date_input1.val(bugun);
-    date_input1.datepicker(options).on('focus', function(date_input){
+    date_input1.datepicker(options).on('focus', function (date_input) {
     });
     date_input2.val(bugun);
-    date_input2.datepicker(options).on('focus', function(date_input){
+    date_input2.datepicker(options).on('focus', function (date_input) {
     });
 
 
@@ -318,77 +318,162 @@ $(document).ready(function () {
     });
 
 
-    $('.date-check-in').on('click', function(e){
-        if($(e.target).is('#ti-calendar1')){
+    $('.date-check-in').on('click', function (e) {
+        if ($(e.target).is('#ti-calendar1')) {
             date_input1.trigger('focus');
         }
     });
 
     //------------------------------OWL CAROUSE----------------------
-    if(! $.isFunction('owlCarousel')){
+    if (!$.isFunction('owlCarousel')) {
         $('.uni-owl-one-item').owlCarousel({
-            loop:true,
-            margin:30,
-            responsiveClass:true,
-            nav:true,
-            navText:[],
-            dots:true,
-            responsive:{
-                0:{
-                    items:1
+            loop: true,
+            margin: 30,
+            responsiveClass: true,
+            nav: true,
+            navText: [],
+            dots: true,
+            responsive: {
+                0: {
+                    items: 1
                 }
             }
         });
         $('.uni-owl-two-item').owlCarousel({
-            loop:true,
-            margin:30,
-            responsiveClass:true,
-            nav:true,
-            navText:[],
-            dots:true,
-            responsive:{
-                0:{
-                    items:1
+            loop: true,
+            margin: 30,
+            responsiveClass: true,
+            nav: true,
+            navText: [],
+            dots: true,
+            responsive: {
+                0: {
+                    items: 1
                 },
-                768:{
-                    items:2
+                768: {
+                    items: 2
                 }
             }
         });
         $('.uni-owl-three-item').owlCarousel({
-            loop:true,
-            margin:30,
-            responsiveClass:true,
-            nav:true,
-            navText:[],
-            dots:true,
-            responsive:{
-                0:{
-                    items:1
+            loop: true,
+            margin: 30,
+            responsiveClass: true,
+            nav: true,
+            navText: [],
+            dots: true,
+            responsive: {
+                0: {
+                    items: 1
                 },
-                768:{
-                    items:3
+                768: {
+                    items: 3
                 }
             }
         });
         $('.uni-owl-four-item').owlCarousel({
-            loop:true,
-            margin:30,
-            responsiveClass:true,
-            nav:true,
-            navText:[],
-            dots:true,
-            responsive:{
-                0:{
-                    items:1
+            loop: true,
+            margin: 30,
+            responsiveClass: true,
+            nav: true,
+            navText: [],
+            dots: true,
+            responsive: {
+                0: {
+                    items: 1
                 },
-                600:{
-                    items:2
+                600: {
+                    items: 2
                 },
-                992:{
-                    items:4
+                992: {
+                    items: 4
                 }
             }
         });
     }
 });
+let fullName = document.getElementById("fullName");
+let input = document.getElementById("input");
+let nationality = document.getElementById("nationality");
+let phone = document.getElementById("phone");
+let email = document.getElementById("email");
+let address = document.getElementById("address");
+let emergencyName = document.getElementById("emergencyName");
+let emergencyPhone = document.getElementById("emergencyPhone");
+let authorize = document.getElementById("authorize");
+let signature = document.getElementById("signature");
+let date = document.getElementById("Date");
+let load = document.getElementById("load")
+
+
+function reset() {
+    let confirmReset = confirm("Are you sure you want to reset the form?");
+    if (!confirmReset) return;
+
+    clear();
+}
+
+
+
+
+function submit() {
+
+
+    console.log("hello")
+
+    if (fullName.value === "" || input.value === "" || phone.value === "" || email.value === "" || emergencyName.value === "" || emergencyPhone.value === "" || authorize.value === false || signature.value === "" || date.value === "") {
+        window.alert("Please fill all required fields marked with *");
+        clear();
+    }
+
+    else {
+        let message =
+            "Form Submitted:\n\n" +
+            "Full Name: " + fullName.value + "\n" +
+            "Date of Birth: " + input.value + "\n" +
+            "Gender: " + gender.value + "\n" +
+            "Nationality: " + nationality.value + "\n" +
+            "Phone: " + phone.value + "\n" +
+            "Email: " + email.value + "\n" +
+            "Address: " + address.value + "\n" +
+            "Emergency Contact Name: " + emergencyName.value + "\n" +
+            "Emergency Contact Phone: " + emergencyPhone.value + "\n" +
+
+            "Signature: " + signature.value + "\n" +
+            "Date: " + date.value;
+        console.log(message)
+        window.alert(message);
+        
+        
+        setTimeout(() => {
+            document.querySelector("body").remove();
+           window.location.href = "home.html";
+            
+        }, 2000);
+    }
+}
+
+function clear() {
+    fullName.value = "";
+    input.value = "";
+
+    nationality.value = "";
+    phone.value = "";
+    email.value = "";
+    address.value = "";
+
+
+    emergencyName.value = "";
+    emergencyPhone.value = "";
+
+    authorize.checked = false;
+    signature.value = "";
+
+    Date.value = "";
+}
+
+
+
+let activePage = document.getElementById("active")
+
+activePage.style.color = "blue"
